@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+	<style>
+
+body {
+			line-height: 1;
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+
+
+
+		.container{
+			width: 100%;
+			margin: auto;
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			
+		}
+
+		hr {
+			width: 90%;
+			
+		}
+
+		span{
+			font-size: 15px;
+		}
+
+		p{
+			line-height: 1.2;
+			font-size: 15px;
+			margin-top: 0;
+			margin-left: 20px; 
+		}
+
+
+
+
+
+		.leftsidecol {
+			margin-left: 20%;
+		}
+
+
+		.rightsidecol img{
+			width: 400px;
+		}
+
+
+		.rightsidecol{
+			margin-left: 20%;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+
+
+
+
+
+
+		p.headerptag{
+			margin: 0;
+			color: white;
+		}
+
+
+
+		.cvheader3 {
+			width: 70%;
+			margin: auto;
+		}
+
+		.contactinput{
+			width: 85%;
+			margin-right: 0px;
+			border: 2px solid #dfdbdb;
+			padding: 7px;
+
+		}
+
+
+		header.cvheader1{
+			margin-bottom: 50px;
+		}
+
+
+
+
+		/*third head*/
+			
+		.main3div{
+			margin: 0 auto;
+		}
+
+
+		.featuresp{
+			margin-left: 0;
+		}
+
+		.featuresplast{
+			margin-left: 0;
+			padding-bottom: 0;
+		}
+
+
+		.ourstuff{
+			margin-left: 0;
+		}
+
+
+
+
+
+
+
+		.contactdiv{
+			width: 50%;
+			
+			margin: auto;
+		}
+
+
+
+
+
+		.leftcontent{
+			margin: 0;
+			padding: 0;
+		}
+
+
+		h1.cv, h3.cv{
+			text-align: center;
+		}
+
+
+
+		label.personaldetails {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 1.7;
+
+
+		}
+
+		.personaldetails, li{
+			line-height: 1.5;
+			font-size: 15px;
+
+
+		}
+
+
+
+		.firstsection, .secondsection, 
+		.thirdsection, .fourthsection, 
+		.fifthsection, .tenthsection,
+		.sixthsection, .seventhsection, 
+		.eighthsection, .ninethsection,.fourthsection1 {
+			margin-left: 80px;
+			margin-right: 80px;
+			margin-bottom: 30px;
+			margin-top: 47px;
+		}
+
+
+
+
+
+		.row {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.row::after {
+			clear: both;
+			display: table;
+			content: "";
+		}
+
+
+
+
+		.row1 {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			
+		}
+
+		.row1::after {
+			clear: both;
+			display: table;
+			content: "";
+		}
+
+
+
+
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.6633%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+
+
+
+		.rightsection {
+			border-left: 1px solid black;
+			padding-left: 30px;
+		}
+
+
+		.leftsection {
+			padding-left: 30px;
+			padding-right: 20px;
+		}
+
+
+		.righthr{
+			width: 500px;
+		}
+
+
+		hr.lefthr{
+			width: 500px;
+		}
+
+		.secondsection2, 
+		.thirdsection3, .fourthsection4, 
+		.fifthsection5, .tenthsection10,
+		.sixthsection6, 
+		.eighthsection8, .ninethsection9 {
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+
+
+		.seventhsection7,.firstsection1{
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+
+
+
+		.rightsection1 {
+			border-right: 1px solid black;
+			padding-left: 30px;
+			padding-right: 35px;
+		}
+
+
+		.leftsection1 {
+			padding-left: 30px;
+			padding-right: 20px;
+		}
+
+
+
+		.hrline{
+			width: 90%;
+			margin-top: 50px;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row1">
+			<!-- row start -->
+			<div class="col-4">
+				<div class="leftsection">
+					<h3>PERSONAL DATA</h3>
+					<div class="firstsection1">
+						<label class="personaldetails">full Name: </label><span class="personaldetails"> {{personcvs.fullname}}</span>
+						<br>
+						<label class="personaldetails">Date of Birth: </label><span class="personaldetails"> {{personcvs.dateofbirth}}</span><br>
+						<label class="personaldetails">Sex:</label><span class="personaldetails"> {{personcvs.sex}}</span><br>
+						<label class="personaldetails">State Of Origin: </label><span class="personaldetails"> {{personcvs.state}} </span><br>
+						<label class="personaldetails">L.G.A:</label><span class="personaldetails"> {{personcvs.lga}}</span><br>
+
+						<label class="personaldetails">Marital Status:</label><span class="personaldetails"> {{personcvs.maritalstatus}}</span><br>
+						<label class="personaldetails">Address:</label><span class="personaldetails"> {{personcvs.address}}</span><br>
+						<label class="personaldetails">Phone:</label><span class="personaldetails"> {{personcvs.phonenumber}}</span><br>
+						<label class="personaldetails">Email:</label><span class="personaldetails"> {{personcvs.cvemail}}</span><br>
+					</div><br>
+
+
+					<div class="seventhsection7">
+						{% if personcvs.skills %}
+						<h3>SKILLS</h3>
+
+						<ul>
+							{% for skill in personcvs.skills %}
+							<li>
+								{{ skill }}
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					</div>
+
+					
+
+					<div class="eighthsection8">
+						{% if personcvs.languages %}
+						<h3>LANGUAGES</h3>
+						<ul>
+							{% for language in personcvs.languages %}
+							<li>
+								{{language}}
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					</div>
+
+					
+
+					<div class="ninethsection9">
+						{% if personcvs.hobbies %}
+						<h3>HOBBIES</h3>
+						<ul>
+							{% for hobby in personcvs.hobbies %}
+							<li>
+								{{hobby}}
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					</div>
+
+
+
+
+
+					<!-- colend -->
+				</div>
+			</div>
+
+			<div class="col-8">
+
+
+				<div class="rightsection">
+
+							<div class="secondsection2">
+								{% if personcvs.combined_datas_institution %}
+						<h3>INSTITUTIONS ATTENDAED, QUALIFICATION WITH DATE</h3>
+						{% for institution, qualification, instituteyear in personcvs.combined_datas_institution %}
+						<div class="row">
+							<div class="col-9">
+								<span class="personaldetails">{{institution}}</span><span class="personaldetails"> ({{qualification}})</span>
+							</div>
+							<div class="col-3">
+								<span class="personaldetails">{{instituteyear}}</span><br>
+							</div>
+						</div>
+
+						{% endfor %}
+						{% endif %}
+
+					</div>
+
+
+						<hr class="righthr">
+
+					<div class="thirdsection3">
+						{% if personcvs.combined_data_qualification %}
+						<h3>QUALIFICATION OBTAINED WITH DATE</h3>
+						{% for coursestudy, qualificationin, yearcomploted in personcvs.combined_data_qualification %}
+						<div class="row">
+							<div class="col-9">
+								<span class="personaldetails">{{qualificationin}} in {{coursestudy}}</span>
+							</div>
+							<div class="col-3">
+								<span class="personaldetails">{{yearcomploted}}</span><br>
+							</div>
+						</div>
+						{% endfor %}
+						{% endif %}
+
+					</div>
+
+
+					<hr class="righthr">
+
+					<div class="fourthsection4">
+						{% if personcvs.combined_data_work_experience %}
+						<h3>WORK EXPERIENCE</h3>
+						{% for organizationname, organizationaddress, position, dailytask, yearfrom, yearto in personcvs.combined_data_work_experience %}
+						<label class="personaldetails">Organization: </label><span class="personaldetails"> {{organizationname}}</span>
+						<br>
+						<label class="personaldetails">Address: </label><span class="personaldetails"> {{organizationaddress}}</span><br>
+						<label class="personaldetails">Position: </label><span class="personaldetails"> {{position}}</span><br>
+						<label class="personaldetails">Daily Tasks: </label><br>
+						<ul>
+							<li>
+								{{dailytask}}
+							</li>
+						</ul>
+						<label class="personaldetails">Period: </label><span class="personaldetails"> {{yearfrom}} – {{yearto}}
+						</span><br><br><br>
+
+						{% endfor %}
+						{% endif %}
+
+
+
+					</div>
+
+					<hr class="righthr">
+
+
+
+<br>
+
+					<div class="fourthsection4">
+						{% if personcvs.combine_data_project %}
+						<h3>PROJECTS</h3>
+						{% for projecttitle, projectdate, projectrole, ProjectDescription in personcvs.combine_data_project %}
+						<label class="personaldetails">Project Title: </label><span class="personaldetails"> {{projecttitle}}</span> <br>
+						<label class="personaldetails">Project Date: </label><span class="personaldetails">{{projectdate}}
+						</span>
+						<br>
+						<label class="personaldetails">Role in project: </label><span class="personaldetails"> {{projectrole}}</span><br>
+						<label class="personaldetails">Brief Description: </label><br>
+						<p style="margin-right: 10px;">
+							{{ProjectDescription}}
+						</p>
+			
+						<br>
+
+						{% endfor %}
+						{% endif %}
+
+					</div>
+
+
+					<hr class="righthr">
+					
+
+					<div class="fifthsection5">
+						{% if personcvs.combine_data_certification %}
+						<h3>CERTIFICATION OBTAINED WITH DATE</h3>
+						{% for nameofcertification, dateofcertification in personcvs.combine_data_certification %}
+						<div class="row">
+							<div class="col-9">
+								<ul style="margin: 5px 0;">
+									<li class="personaldetails">{{nameofcertification}}</li>
+								</ul>
+							</div>
+							<div class="col-3">
+								<span class="personaldetails">{{dateofcertification}}</span><br>
+							</div>
+						</div>
+						{% endfor %}
+						{% endif %}
+						
+					</div>
+
+					
+					<hr class="righthr">
+
+
+					<div class="tenthsection10">
+						{% if personcvs.combine_data_reference %}
+						<h3>REFERENCES</h3>
+						{% for refereename, refereetitle, refereeorganization, refereeaddress, referee_email in personcvs.combine_data_reference %}
+						<label class="personaldetails">Full Name: </label><span class="personaldetails"> {{refereename}}</span>
+						<br>
+						<label class="personaldetails">Title: </label><span class="personaldetails"> {{refereetitle}}</span><br>
+						<label class="personaldetails">Organization Name:</label><span class="personaldetails"> {{refereeorganization}}</span><br>
+						<label class="personaldetails">Address: </label><span class="personaldetails"> {{refereeaddress}}</span><br>
+						<label class="personaldetails">Email:</label><span class="personaldetails"> {{referee_email}}</span><br><br><br>
+						
+						{% endfor %}
+						{% endif %}
+					</div>
+
+
+				</div>
+
+				<!-- colend -->
+			</div>
+			<!-- row end -->
+		</div>
+		<!-- container end -->
+	</div>
+
+	
+
+</body>
+</html>

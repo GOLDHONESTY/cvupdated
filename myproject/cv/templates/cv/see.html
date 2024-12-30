@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    
+
+
+<p> fullname: {{personcvs.fullname}}</p>
+
+<p> dateofbirth: {{personcvs.dateofbirth}}</p>
+<p>sex:{{personcvs.sex}}</p>
+<p>state:{{personcvs.state}}</p>
+<p>lga:{{personcvs.lga}}</p>
+<p>maritalstatus:{{personcvs.maritalstatus}}</p>
+<p>address:{{personcvs.address}}</p>
+<p>phonenumber:{{personcvs.phonenumber}}</p>
+<p>cvemail:{{personcvs.cvemail}}</p>
+
+<br>
+<hr>
+<br>
+
+
+{% if personcvs.combined_datas_institution %}
+<h3>INSTITUTIONS ATTENDAED, QUALIFICATION WITH DATE:</h3>
+<ul>
+{% for institution, qualification, instituteyear in personcvs.combined_datas_institution %}
+            <li>{{ institution }} ({{ qualification }})  ------- {{ instituteyear }}.</li>
+    {% endfor %}
+
+</ul>
+{% endif %}
+
+<br>
+
+<hr>
+
+<br>
+
+
+{% if personcvs.combined_data_qualification %}
+        <h3>QUALIFICATION OBTAINED WITH DATE:</h3>
+        <ul>
+        {% for coursestudy, qualificationin, yearcomploted in personcvs.combined_data_qualification %}
+            <li>{{ coursestudy }} in {{ qualificationin }} ------ {{ yearcomploted }}.</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+<hr>
+
+<br>
+
+
+
+
+{% for organizationname, organizationaddress, position, dailytask, yearfrom, yearto in personcvs.combined_data_work_experience %}
+            <h3>WORK EXPERIENCE</h3>
+            <p>Organization: {{ organizationname }}</p>
+           
+
+            <p>Address: {{organizationaddress}}</p>
+            <p>Position: {{position}}</p>
+            <p>Daily Tasks: </p>
+            
+            <ul class="check">
+                
+                <li>{{dailytask}}</li> 
+              
+            </ul>
+
+            <ul class="checks">
+                
+                
+              
+            </ul>
+            
+
+            
+
+            
+            <p>Period: {{yearfrom}} – {{yearto}}</p>
+
+{% endfor %}
+<br>
+<hr>
+<br>
+
+<h3>PROJECTS</h3>
+{% for projecttitle, projectdate, projectrole, ProjectDescription in personcvs.combine_data_project %}
+
+
+<p>Project Title: {{projecttitle}}</p>
+<p>Project Date: {{projectdate}}</p>
+<p>Role in project: {{projectrole}}</p>
+Brief Description:
+{{ProjectDescription}}
+{% endfor %}
+
+
+<hr><hr>
+<h3>CERTIFICATION OBTAINED WITH DATE</h3>
+{% for nameofcertification, dateofcertification in personcvs.combine_data_certification %}
+
+<div style="display: flex; justify-content: space-between;">
+    <p>{{nameofcertification}}</p>
+    <strong>{{dateofcertification}}</strong>
+</div>
+
+{% endfor %}
+
+<br>
+<hr>
+<br>
+
+
+
+SKILLS
+<ul>
+    {% for skill in personcvs.skills %}
+    <li>{{skill}}</li>
+    {% endfor %}
+</ul>
+
+
+<br>
+<hr>
+<br>
+
+<h3>LANGUAGES</h3>
+<ul>
+    {% for language in personcvs.languages %}
+    <li>{{language}}</li>
+    {% endfor %}
+</ul>
+
+<h3>REFERENCES</h3>
+{% for refereename, refereetitle,refereeorganization, refereeaddress,referee_email in personcvs.combine_data_reference %}
+
+
+<p>full name:{{refereetitle}} {{refereename}}</p>
+<p>Address: {{refereeaddress}}</p>
+<p>Organization Name: {{refereeorganization}}</p>
+
+<p>Email: {{referee_email}}</p>
+
+{% endfor %}
+
+
+
+
+    
+ 
+     <script defer>
+        // const dailyTasksList = document.getElementById('daily-tasks');
+        // let a =document.getElementsByClassName("check");
+        
+
+        // for (let i = 0; i < a.length; i++) {
+        //     console.log(a[i]);
+        //     const taskItem = document.createElement('li');
+        //     taskItem.innerHTML = a[i].textContent;
+        //     dailyTasksList.appendChild(taskItem);
+        //     //dailyTasksList.innerHTML += a[i]            
+        //     //console.log(dailyTasksList);
+        // }
+        
+        
+        
+        
+        
+
+      
+
+
+
+
+
+        //  document.addEventListener('DOMContentLoaded', function() {
+        //      const dailyTasksData = JSON.parse(document.getElementById('daily-tasks-data').textContent);
+        //      const dailyTasksList = document.getElementById('daily-tasks');
+        //     var d = []
+        //      dailyTasksData.forEach(task => {
+        //          const taskItem = document.createElement('li');
+                
+        //          d.push(taskItem.innerHTML = task.replace(/\r\n/g, '<br>'));
+        //          console.log(d)
+
+                 
+        //          dailyTasksList.appendChild(taskItem);
+        //      });
+        //  });
+     </script>
+
+
+
+
+
+
+
+                                             
+<!-- <script type="text/javascript"> -->
+
+    <!-- // var sourceContent = document.getElementById('check').textContent;
+    // console.log(sourceContent);
+
+    // for (item in sourceContent){
+    //     document.getElementById('targetElement').innerHTML = sourceContent;
+    //     console.log(document.getElementById('targetElement').innerHTML = sourceContent);
+    // } -->
+
+    
+    
+
+
+<!-- </script>                                            -->
+                                            
+</body>
+</html>

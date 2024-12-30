@@ -1,0 +1,215 @@
+{% extends 'cv/baselayout.html' %}
+{% load static %}
+{% block body %}
+	<div class="maincontainer" id="section-1-gradient">
+		<div class="row">
+			<div class="col-6">
+				<div class="leftsidecol">
+					<h2 style="margin-top: 0; color:white;">Generating new Business Growth Plans</h2>
+					<p class="headerptag">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br><br>
+					<div class="aaa">
+						<a href="#cvformats" class="trytemplate">Try Our CV Template</a>
+					</div>
+				</div>
+			</div>
+		
+
+
+
+			<div class="col-6">
+				<div class="rightsidecol">
+					<img src="{% static 'cv/img/laptop.png' %}" alt="https://pixabay.com/vectors/laptop-computer-portable-pc-2298286/" >
+				</div>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+
+
+	<!-- NEXT SECTION -->
+
+	<div class="maincontainer2" style="margin:auto; width: 90%;">
+		<header class="cvheader1" style="text-align:center;" id="cvformats">
+			<h4>Resume Builder</h4>
+			<h2>Create a Dream Job Capturing Resume</h2>
+			<p style="font-size:17px;" class="ourstuff">Our Resume Templates helps you to create a Professional Resume to land the job of your dream</p>
+		</header>
+
+
+		<div style="text-align:center; " class="cvrowdiv">
+
+
+			<div class="row">
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!-- else -->
+						<a href="{% url 'cvregister' %}"><img src="{% static 'cv/img/resume1.jpeg' %}" class="resumeimmage"> </a>
+						<div class="imgpoplink" >
+							<a href="{% url 'cvregister' %}">View This Template</a>
+						</div>
+						<!-- endif -->
+
+					</div>
+					
+				</div>
+
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!--  else  -->
+						<a href="{% url 'cvregister' %}"><img src="{% static 'cv/img/resume2.jpeg' %}" class="resumeimmage"></a>
+						<div class="imgpoplink2" >
+							<a href="{% url 'cvregister' %}">View This Template</a>
+						</div>
+						<!--  endif  -->
+					</div>
+				</div>
+
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!--  else  -->
+						<a href="{% url 'cvregister' %}"><img src="{% static 'cv/img/resume3.jpeg' %}" class="resumeimmage"></a>
+						<div class="imgpoplink3" >
+							<a href="{% url 'cvregister' %}">View This Template</a>
+						</div>
+						<!--  endif  -->
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		
+	</div>
+
+
+	<div class="maincontainer3">
+		<header class="cvheader2" style="text-align:center; margin-top: 70px;">
+			<div class="main3div">
+				<h4>Our features</h4>
+				<h2>Why Are We The Best </h2>
+					<p style="font-size:17px; margin-left: 0;" class="ourstuff" >Our Resume platform helpy yoy create a professional Resume for <strong>FREE</strong></p>
+
+				<div class="row">
+					<div class="col-6">
+						<ul style="text-align:justify;" class="ulfeatures1">
+							<li><i class="fa fa-clock-o" style='font-size:22px;color:#20359d'></i><h4 style="display:inline; font-size: 20px;"> Time Saving</h4></li>
+							<p class="featuresp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<li><i class="fa fa-credit-card-alt" style='font-size:20px;color:#20359d'></i><h4 style="display:inline; font-size: 20px;"> Free Usage</h4></li>
+							<p class="featuresp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</ul>
+					</div>
+
+
+					<div class="col-6 downloadfeature" style="text-align:justify;">
+						<div class="featul">
+							<ul style="text-align:justify;" class="ulfeatures2">
+								<li><i class="fa fa-download" style='font-size:22px;color:#20359d'></i><h4 style="display:inline; font-size: 20px;"> Download Your Resume</h4></li>
+								<p class="featuresp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+								
+								
+								
+								<li><i class="fa fa-check-square-o" style='font-size:22px;color:#20359d'></i> <h4 style="display:inline; font-size: 20px;"> Professional Template</h4></li>
+								<p class="featuresplast">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+	</div>
+
+
+
+
+	<div class="maincontainer4" id="about">
+		<div class="cvheader3">
+			<h4>What we Do</h4>
+			<h2>About</h2>
+			<div style="text-align:justify;">
+				<p style="font-size:17px;" class="aboutp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+	<div class="maincontainer5" id="contact" style="margin-top: 100px; margin-bottom: 60px;">
+		<div class="cvheader4">
+			<h4 style="text-align:center;">Reach Out to Us</h4>
+			<h2 style="text-align:center;">Contact Us</h2>
+			<div class="contactdiv" >
+				<form class="contactform">
+				<label>Name</label><br><br><input type="text" name="contactname" class="contactinput"><br><br><br>
+				<label>Email</label><br><br><input type="email" name="contactemail" class="contactinput"><br><br><br>
+				<label>Message</label><br><br><textarea class="contactinput"></textarea><br><br>
+
+				<input type="submit" class="contactsubmit">
+
+				</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+{% endblock %}
+
+

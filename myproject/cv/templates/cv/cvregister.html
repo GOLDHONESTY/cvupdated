@@ -1,0 +1,224 @@
+{% extends 'cv/baselayout.html' %}
+{% load static %}
+{% block body %}
+	<form method="POST" id="resumeform">
+		{% csrf_token %}
+		<h3>PERSONAL DETAILS</h3><br>
+
+		<label class="cvreglabel">Full Name</label><br>
+		<input type="text" name="fullname" placeholder="Full Name" class="cvtext">
+		<br>
+
+		<label class="cvreglabel">Date of Birth</label><br>
+		<input type="text" name="dateofbirth" style="margin-right: 15px;">
+
+		<label class="cvreglabel">Sex:</label>
+		<select name="sex">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+
+		<label class="cvreglabel">States</label>
+		<input type="text" name="state" id="state">
+		
+		<br><br>
+
+		<label class="cvreglabel">L.G.A</label>
+		<input type="text" name="lga" placeholder="e.g Warri south" style="width:30%"; class="cvtext">
+
+		<label class="cvreglabel" style="margin-left:15px;">Maritial Status</label>
+		<select name="maritalstatus">
+			<option value="Single">Single</option>
+			<option value="Married">Married</option>
+		</select><br>
+
+		<label class="cvreglabel">Address:</label><br>
+		<input type="text" name="address" placeholder=" e.g 14 outside street, city, State Name" class="cvtext"><br>
+
+		<label class="cvreglabel">Phone Number:</label><br>
+		<input type="tel" name="phonenumber" placeholder="e.g 0805*******"><br>
+
+		<label class="cvreglabel">Email:</label><br>
+		<input type="text" name="cvemail" class="cvtext" placeholder="yourname@email.com"><br>
+
+
+		<hr class="hrline">
+
+
+		<h3 class="cvregisterh3">INSTITUTION ATTENDED</h3>
+
+		<div class="addmorecontainer1">
+			<label class="cvreglabel">Institution Attended:</label>
+			<input type="text" name="institution[]" placeholder="e.g Petroleum Training Institute" class="institution">
+			<label class="cvreglabel">Qualification</label>
+			
+			<input type="text" name="qualification[]" id="" class="institution">
+			
+			<br>
+			<label class="cvreglabel">Year Attended:</label><input type="text" name="instituteyear[]">
+			<button class="add_form_field" href="javascript:void(0);">Add New Field
+	          <span style="font-size:16px; font-weight:bold;">+ </span> </button>
+		</div>
+
+
+		<hr class="hrline">
+
+
+		<h3 class="cvregisterh3">QUALIFICATIONS OBTAINED</h3>
+
+		<div class="addmorecontainer2">
+			<label class="cvreglabel">Course of Study</label><br>
+			<input type="text" name="coursestudy[]" placeholder="e.g Mechanical Engineering" class="institution2"> 
+			<label class="cvreglabel">Qualification</label>
+			
+			<input type="text" name="qualificationin[]" id="" class="institution2">
+
+			<br>
+			<label class="cvreglabel">Year Complited</label>
+			<input type="text" name="yearcomploted[]">
+			<button class="add_form_field2" href="javascript:void(0);">Add New Field 
+	        <span style="font-size:16px; font-weight:bold;">+ </span></button>
+		</div>
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">WORK EXPERIENCE</h3>
+
+		<div class="addmorecontainer3">
+			<label class="cvreglabel">Organization:</label><br>
+			<input type="text" name="organizationname[]" placeholder="Name of Organization" class="cvtext"><br>
+			<label class="cvreglabel">Address</label><br>
+			<input type="text" name="organizationaddress[]" class="cvtext"><br>
+			<label class="cvreglabel">Position</label><br>
+			<input type="text" name="Position[]" class="cvtext"><br>
+			<label class="cvreglabel">Daily Tasks</label><br>
+			<textarea name="dailytask[]"></textarea><br><br>
+			<label class="cvreglabel">From: </label>
+			<input type="text" name="yearfrom[]" style="margin-right:25%">
+			<label class="cvreglabel" style="margin-left:10%">To: </label>
+			<input type="text" name="yearto[]"><br>
+			<button class="add_form_field3" href="javascript:void(0);">Add New Field
+			<span style="font-size:16px; font-weight:bold;">+ </span> </button>
+		</div>
+
+
+
+
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">PROJECT <small style="display:inline; font-size: 11PX; color: orange; text-transform: lowercase; font-weight:16" >(This field is optional)</small></h3>
+
+		<div class="addmoreproject">
+			<label class="cvreglabel">Project Title:</label><br>
+			<input type="text" name="projecttitle[]" placeholder="Title of project" class="cvtext"><br><br>
+			<label class="cvreglabel">Project Date: </label>
+			<input type="text" name="projectdate[]" style="margin-right:5%">
+
+			<label class="cvreglabel">Role in project: </label>
+			<input type="text" name="projectrole[]" placeholder="e.g Backend Development" style="width:30%;" class="cvtext"><br><br>
+			
+			<label class="cvreglabel">Brief Description: </label><br>
+			<textarea name="ProjectDescription[]" class="cvtext"></textarea><br>
+			
+			<button class="add_form_project" href="javascript:void(0);">Add New Field</button>
+	        <span style="font-size:16px; font-weight:bold;">+ </span>
+		</div>
+
+
+
+
+
+
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">CERTIFICATION OBTAINED WITH DATE <small style="display:inline; font-size: 11PX; color: orange; text-transform: lowercase; font-weight:16" >(This field is optional)</small></h3>
+
+
+		<div class="addmorecontainer4">
+			<label class="cvreglabel">Name of certification:</label><br>
+			<input type="text" name="nameofcertification[]" placeholder="Name of Organization" class="cvtext"><br><br>
+			<label class="cvreglabel">Date Obtained: </label>
+			<input type="text" name="dateofcertification[]" style="margin-right:30%;">
+			<button class="add_form_field4" href="javascript:void(0);">Add New Field</button>
+	        <span style="font-size:16px; font-weight:bold;">+ </span>
+		</div>
+
+
+
+
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">SKILLS</h3>
+
+		<div class="addmorecontainer5">
+	
+			<input type="text" name="skills[]" style="width:70%;" class="cvtext">
+			<button class="add_form_field5" href="javascript:void(0);" style="margin-left:3%;">Add More skills</button>
+	        <span style="font-size:16px; font-weight:bold;">+ </span>
+
+		</div>
+
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">LANGUAGES <small style="display:inline; font-size: 11PX; color: orange; text-transform: lowercase; font-weight:16" >(This field is optional)</small></h3>
+
+		<div class="addmorecontainer6">
+	
+			<input type="text" name="languages[]" style="width:70%;" class="cvtext">
+			<button class="add_form_field6" href="javascript:void(0);" style="margin-left:3%;">Add More</button>
+	        <span style="font-size:16px; font-weight:bold;">+ </span>
+
+		</div>
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">HOBBIES</h3>
+
+		<div class="addmorecontainer7">
+	
+			<input type="text" name="hobbies[]" style="width:70%;" class="cvtext">
+			<button class="add_form_field7" href="javascript:void(0);" style="margin-left:3%;">Add More</button>
+	        <span style="font-size:16px; font-weight:bold;">+ </span>
+
+		</div>
+
+
+		<hr class="hrline">
+
+		<h3 class="cvregisterh3">REFERENCES <small style="display:inline; font-size: 11PX; color: orange; text-transform: lowercase; font-weight:16" >(This field is optional)</small></h3>
+
+		<div class="addmorecontainer8">
+			<label class="cvreglabel">Full Name: </label><br>
+			<input type="text" name="refereename[]" placeholder="Full Name of referee" style="width:50%;" class="cvtext"><br>
+			<label class="cvreglabel">Title: </label><br>
+			<input type="text" name="refereetitle[]" placeholder="referee Position in organization" style="width:50%;" class="cvtext"><br>
+			<label class="cvreglabel">Organization: </label><br>
+			<input type="text" name="refereeorganization[]" placeholder="referee work place" style="width:50%;" class="cvtext"><br>
+			<label class="cvreglabel">Address: </label><br>
+			<input type="text" name="refereeaddress[]" placeholder="referee house Address" style="width:50%;" class="cvtext"><br>
+			<label class="cvreglabel">email: </label><br>
+			<input type="text" name="referee_email[]" placeholder="referee email Address" style="width:50%;" class="cvtext"><br>
+			
+			<button class="add_form_field8" href="javascript:void(0);">Add Referee
+			<span style="font-size:16px; font-weight:bold;">+ </span></button>
+
+
+		</div>
+		<br><br><br>
+
+		<input type="submit" class="finalsubmit">
+		
+	</form>
+
+{% endblock %}
+
+

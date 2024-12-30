@@ -1,0 +1,27 @@
+{% extends 'cv/baselayout.html' %}	
+{% load static %}
+{% block body %}
+	<form class="loginform" action="login" method="POST">
+		{% csrf_token %}
+		<h2>Login Form</h2>
+		<a href="login"><button type="button" class="topleftbutton" style="background-color:#ff9800; color: white;">Login</button></a><a href="register"><button type="button" class="toprightbutton" href="register">Signup</button></a>
+		{% for message in messages %}
+		<p style="color:red;margin-top: 10px;margin-bottom: 0;margin-left: 0;">{{message}}</p>
+		{% endfor %}
+		<input type="text" name="username" placeholder="UserName" class="logininput" style="border-color: transparent;outline: none;border-bottom: 3px solid #ff9800;">
+		<input type="password" name="password" placeholder="password" class="logininput" style="margin-bottom: 5px;"><br>
+		<small>Forget password?</small>
+		<input type="submit" value="Login" class="loginsubmit">
+		
+	</form>
+{% endblock %}
+
+
+
+
+
+
+
+
+	
+

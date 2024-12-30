@@ -1,0 +1,31 @@
+{% extends 'cv/baselayout.html' %}
+{% load static %}
+
+{% block body %}
+	
+	<form method="POST" class="signupform">
+
+		{% csrf_token %}
+		<h2>Signup Form</h2>
+		
+		<a href="login"><button type="button" class="topleftbutton" href="login">Login</button></a><a href="register"><button type="button" class="toprightbutton" style="background-color:#ff9800; color: white;">Signup</button></a>
+		{% for message in messages %}
+		<p style="color:red;margin-top: 10px;margin-bottom: 0;margin-left: 0;">{{message}}</p>
+		{% endfor %}
+		<input type="text" name="username" placeholder="Username" class="logininput" style="border-color: transparent;outline: none;border-bottom: 3px solid #ff9800; margin-bottom: 0;">
+		<input type="email" name="email" placeholder="Email Address" class="logininput" style="border-color: transparent;outline: none;border-bottom: 3px solid #ff9800;">
+		<input type="password" name="password" placeholder="password" class="logininput" style="margin-top: 5px;">
+		<input type="password" name="password2" placeholder="confirm password" class="logininput" style="margin-top: 5px;"><br>
+		<input type="submit" value="Sign Up" class="loginsubmit">
+		
+	</form>
+
+{% endblock %}
+
+
+
+
+
+
+	
+

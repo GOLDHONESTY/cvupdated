@@ -1,0 +1,64 @@
+{% extends 'cv/baselayout.html' %}
+{% load static %}
+
+{% block body %}
+    <h1 style="margin-top: 100px;"></h1>
+
+
+
+    
+		<div style="text-align:center; " class="cvrowdiv">
+
+
+			<div class="row">
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!-- else -->
+						<a href="/resu/{{personcvs.id}}"><img src="{% static 'cv/img/resume1.jpeg' %}" class="resumeimmage"> </a>
+						<div style="display: block;" class="imgpoplink" >
+							<a style="padding: 10px 20px;" href="/resu/{{personcvs.id}}">Download</a>
+						</div>
+						<!-- endif -->
+
+					</div>
+					
+				</div>
+
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!--  else  -->
+						<a href="/resu2/{{personcvs.id}}"><img src="{% static 'cv/img/resume2.jpeg' %}" class="resumeimmage"></a>
+						<div style="display: block;" class="imgpoplink2" >
+							<a style="padding: 10px 20px;" href="/resu2/{{personcvs.id}}">Download</a>
+						</div>
+						<!--  endif  -->
+					</div>
+				</div>
+
+
+				<div class="col-4">
+					<div class="cvimgdiv" style="position:relative;">
+						<!--  if user.is_authenticated  -->
+						
+						<!--  else  -->
+						<a href="/resu3/{{personcvs.id}}"><img src="{% static 'cv/img/resume3.jpeg' %}" class="resumeimmage"></a>
+						<div style="display: block;" class="imgpoplink3" >
+							<a style="padding: 10px 20px;" href="/resu3/{{personcvs.id}}">Download</a>
+						</div>
+						<!--  endif  -->
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+        <h1 style="margin-top: 100px;"></h1>
+
+{% endblock %}
